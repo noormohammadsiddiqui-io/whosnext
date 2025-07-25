@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# WhosNext App
 
-## Getting Started
+A Next.js web application for WhosNextting, similar to Omegle. This app uses the 100ms SDK to handle video and audio connections.
 
-First, run the development server:
+## Features
+
+- WhosNext connections
+- Audio and video toggle controls
+- "Next" button to find a new chat partner
+- Responsive design with Tailwind CSS
+- Built with Next.js and TypeScript
+
+## Prerequisites
+
+- Node.js 14.x or higher
+- A 100ms account with API credentials
+
+## Setup
+
+1. Clone the repository
+
+```bash
+git clone <repository-url>
+cd video-chat-app
+```
+
+2. Install dependencies
+
+```bash
+npm install
+```
+
+3. Configure environment variables
+
+Create a `.env.local` file in the root directory with the following variables:
+
+```
+NEXT_PUBLIC_ROOM_ID=your_room_id_here
+NEXT_PUBLIC_HMS_ACCESS_KEY=your_access_key_here
+HMS_SECRET=your_secret_key_here
+```
+
+You can get these credentials from your 100ms dashboard.
+
+4. Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `/src/app/page.tsx` - Home page with "Start Chat" button
+- `/src/app/chat/page.tsx` - Chat page that connects to a random room
+- `/src/app/api/token/route.ts` - API route to generate 100ms token
+- `/src/components/VideoChat.tsx` - Component for video chat UI and controls
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+This app is ready for deployment on Vercel:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Or deploy directly to Vercel:
 
-## Deploy on Vercel
+```bash
+vercel
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT

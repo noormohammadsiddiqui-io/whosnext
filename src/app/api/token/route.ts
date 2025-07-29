@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server';
 import { SignJWT } from 'jose';
-import { randomUUID } from 'crypto';
 
 export async function GET() {
   try {

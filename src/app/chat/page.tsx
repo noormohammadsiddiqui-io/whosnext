@@ -13,9 +13,6 @@ import ErrorBoundary from '@/components/ErrorBoundary';
 import LoadingSpinner from '@/components/LoadingSpinner';
 import { generateRandomUsername } from '@/utils/roomUtils';
 
-// Add this import
-import { selectPeers } from '@100mslive/react-sdk';
-
 function ChatPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState('');

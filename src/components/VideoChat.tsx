@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import {
   selectLocalPeer,
   selectPeers,
@@ -23,7 +23,7 @@ export default function VideoChat({ onNextChat }: VideoChatProps) {
   const [isVideoOff, setIsVideoOff] = useState(false);
   const hmsActions = useHMSActions();
 
-  // Toggle audio - updated version
+
   const toggleAudio = async () => {
     try {
       const newMutedState = !isMuted;
@@ -34,7 +34,7 @@ export default function VideoChat({ onNextChat }: VideoChatProps) {
     }
   };
 
-  // Toggle video - updated version
+  
   const toggleVideo = async () => {
     try {
       const newVideoState = !isVideoOff;
@@ -46,7 +46,7 @@ export default function VideoChat({ onNextChat }: VideoChatProps) {
     }
   };
 
-  // Video component for rendering video tiles
+ 
   const VideoTile = ({ peerId, isLocal = false }: { peerId: string; isLocal?: boolean }) => {
     const { videoRef } = useVideo({
       trackId: peers.find(p => p.id === peerId)?.videoTrack
@@ -68,7 +68,7 @@ export default function VideoChat({ onNextChat }: VideoChatProps) {
     );
   };
 
-  // Check if we have a remote peer
+
   const remotePeer = peers.find(p => !p.isLocal);
 
   return (

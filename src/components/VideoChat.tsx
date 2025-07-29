@@ -110,7 +110,7 @@ export default function VideoChat({ onNextChat }: VideoChatProps) {
                 </div>
                 <div className="mt-8 text-center">
                   <h2 className="text-2xl font-bold mb-2">Waiting for someone to join...</h2>
-                  <p className="text-gray-400">You're the first one here. When someone joins, you'll see them here.</p>
+                  <p className="text-gray-400">You are the first one here. When someone joins, you will see them here.</p>
                 </div>
               </div>
             )}

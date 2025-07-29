@@ -30,7 +30,6 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
-        // Add inside the body component:
         <OnlineCount />
       </body>
     </html>

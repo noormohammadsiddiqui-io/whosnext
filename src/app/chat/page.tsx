@@ -3,9 +3,9 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import {
-  selectIsConnectedToRoom,
+  // selectIsConnectedToRoom,
   useHMSActions,
-  useHMSStore,
+  // useHMSStore,
   HMSRoomProvider
 } from '@100mslive/react-sdk';
 import VideoChat from '@/components/VideoChat';
@@ -18,7 +18,7 @@ function ChatPage() {
   const [error, setError] = useState('');
   const router = useRouter();
   const hmsActions = useHMSActions();
-  const isConnected = useHMSStore(selectIsConnectedToRoom);
+  // const isConnected = useHMSStore(selectIsConnectedToRoom);
 
   useEffect(() => {
     let isMounted = true;
